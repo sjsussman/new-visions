@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import './App.css';
 
 function App() {
+  //useState hook to set the component the state
+  const [studentData, setStudentData] = useState([])
+
+  useEffect(() => {
+  //Axios checks server @ '/studentlist' endpoint and returns the data in the response
+    axios.get('/studentlist')
+      .then(res => {
+      setStudentData(res.data)
+      console.log(studentData)
+    })
+      .catch(err => console.log(err));
+    }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      Test
     </div>
   );
 }
