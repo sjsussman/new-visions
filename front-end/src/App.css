@@ -1,3 +1,7 @@
+html {
+  background-color:snow;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +39,51 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+#container {
+display: flex;
+justify-content: center;
+text-align: center;
+
+}
+
+#lowestAverage{
+  width: 50%;
+  margin: 5%;
+}
+
+#roster {
+  width: 50%;
+  margin: 5%
+}
+
+#avg {
+  border: 1px solid black;
+}
+
+#ros {
+  border: 1px solid black;
+  padding-bottom: 25px;
+}
+
+.name {
+  margin-bottom: 0;
+}
+
+.grade {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.average {
+  margin-top: 0;
 }
