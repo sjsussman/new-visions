@@ -24,7 +24,10 @@ for (let student in newArr) {
         }
     }
 }
-return(holder)
+
+var merged = holder.flat(2)
+console.log(merged)
+return(merged)
 }
 
 export default groupByGrade;
