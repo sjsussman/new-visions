@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css';
 
+import groupByGrade from './helpers/groupByGrade'
+import findLowestAverages  from './helpers/findLowestAverages'
+
 function App() {
   //useState hook to set the component the state
   const [studentData, setStudentData] = useState([])
@@ -12,6 +15,10 @@ function App() {
       .then(res => {
       setStudentData(res.data)
       console.log(studentData)
+    })
+    .then(res => {
+      console.log(groupByGrade(studentData));
+      console.log(findLowestAverages(studentData));
     })
       .catch(err => console.log(err));
     }, []);
